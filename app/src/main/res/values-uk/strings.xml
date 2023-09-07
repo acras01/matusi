@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Matusi</string>
+    <string name="navigation_drawer_open">Відкрити меню</string>
+    <string name="navigation_drawer_close">Закрити меню</string>
+    <string name="nav_header_title">Matusi</string>
+    <string name="action_settings">Налаштування</string>
+    <string name="give_permissions">\tДодаток потребує деякі дозволи для того, щоб працювати повноцінно.\n
+        \tДля того, аби знайти Вас на Google Maps, додатку потрібен доступ до місцезнаходження.\n
+        \tДякуємо за розуміння!</string>
+    <string name="do_not_ask">Не питати в наступному</string>
+    <string name="give_permissions_title">Потрібні дозволи</string>
+    <string name="not_functional">Matusi не буде повністю функціональним</string>
+    <string name="not_functional_check">Matusi не буде повністю функціональним. Якщо ви бажаєте це змінити, будь-ласка, надайте дозволи в Налаштуваннях системи</string>
+    <string name="enter_address_title">Введіть адресу</string>
+    <string name="enter_address_button">Вказати адресу</string>
+    <string name="welcome">Успішно авторизовано. Вітаємо, %1$s!</string>
+    <string name="error">Не вдалося авторизувати. Спробуйте пізніше</string>
+    <string name="choose_my_location">Визначити за моїм місцезнаходженням</string>
+    <string name="enter_address">Введіть адресу, будь ласка</string>
+    <string name="pick_location_on_map">Оберіть локацію на мапі</string>
+    <string name="save_location">Зберегти локацію</string>
+    <string name="prompt_email">Адреса електроної пошти</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in">Авторизація/реєстрація</string>
+    <string name="action_sign_in_short">Авторизація</string>
+    <string name="sign_out">Вихід з акаунту</string>
+    <string name="authorize">Авторизація</string>
+    <string name="sign_out_failed">Не вдалося вийти з акаунту</string>
+    <string name="delete_account_failed">Не вдалося видалити акаунт</string>
+    <string name="authorization_failed">Не вдалося авторизувати</string>
+    <string name="fill_all_fields">Вкажіть всі дані, будь ласка</string>
+    <string name="password_not_equal">Введені паролі не співпадають</string>
+    <string name="sign_up">Реєстрація</string>
+    <string name="delete_account">Видалити акаунт</string>
+    <string name="existing_user">Існуючий акаунт</string>
+    <string name="new_user">Новий акаунт</string>
+    <string name="login_failed">Не вдалося авторизувати</string>
+    <string name="invalid_password">Пароль має бути не менше 6 літер</string>
+    <string name="invalid_username">Акаунт з таким ім\'ям вже існує</string>
+    <string name="delete_account_title">Видалення акаунту</string>
+    <string name="delete_account_body">Ви впевнені, що хочете видалити акаунт?</string>
+    <string name="welcome_title">Ласкаво просимо в Матусі</string>
+    <string name="location_title">Ваше місцезнаходження</string>
+    <string name="sign_in_with_email">Авторизація по пошті</string>
+    <string name="account_settings">Налаштування акаунту</string>
+    <string name="enter_social">Введіть посилання на будь-яку соціальну мережу, якою ви користуєтесь (Facebook, Twitter, LinkedIn, Whatsapp, Telegram тощо)</string>
+    <string name="add_child">Додати дитину</string>
+    <string name="set_schedule">Встановити розклад</string>
+    <string name="enter_age">Вік дитини</string>
+    <string name="add_child_hint">Натисніть \"Додати дитину\", щоб додати дитину. Після додавання - коротке натискання по назві дитини призводить до редагування, довге натискання - до видалення</string>
+    <string name="field_empty">Поле не може бути порожнім</string>
+    <string name="delete_child_title">Видалення запису</string>
+    <string name="delete_child_body">Ви впевнені, що хочете видалити запис?</string>
+    <string name="save_user">Зберегти до акаунту</string>
+    <string name="name_and_social">Ваш обліковий запис MATUSI створено! Тепер заповніть свій профіль, щоб повідомити нам, як ми можемо вам допомогти</string>
+    <string name="fill_social">Укажіть принаймні одну соціальну мережу</string>
+    <string name="kid">Дитина %1$d</string>
+    <string name="tell_about_kids">Розкажіть нам про своїх дітей</string>
+    <string name="set_radius_title">Зона</string>
+    <string name="name_title">Персоніфікація</string>
+    <string name="add_child_title">Діти</string>
+    <string name="set_radius">Будь ласка, вкажіть свій регіон, щоб знайти місцеву групу дитячого садка:</string>
+    <string name="choose_limit">Виберіть максимальний радіус зони (км)</string>
+    <string name="edit_child">Редагувати опис дитини</string>
+    <string name="terms_of_use_agree">Я згоден з усіма умовами використання програми</string>
+    <string name="click_to_see"><u>Натисніть для перегляду</u></string>
+    <string name="terms_of_use_title">Правила використання</string>
+    <string name="time_title">Встановіть %1$s час для %2$s</string>
+    <string name="child_schedule">Дитячий розклад</string>
+    <string name="babysit_title">Скажіть нам, коли ви можете посидіти з дітьми:</string>
+    <string name="terms_of_use">Вся інформація в нашому мобільному додатку надається добросовісно,
+        однак ми не робимо жодних заяв чи гарантій будь-якого роду, явних чи непрямих, щодо точності,
+        адекватності, дійсності, надійності, життєздатності або повноти будь-якої інформації про мобільний додаток.
+        Ні за яких обставин ми не несемо жодної відповідальності перед вами за будь-які збитки чи пошкодження будь-якого роду, понесені в результаті
+        використання мобільного додатку або довіри до будь-якої інформації, наданої в мобільному додатку.
+        Використання вами мобільного додатку та використання вами будь-якої інформації в цьому мобільному додатку здійснюється виключно на
+        ваш власний ризик</string>
+    <string name="welcome_summary">
+•   Вам потрібно йти на роботу? Ви шукаєте <font color="#FFE79C3E">садок</font> для своїх <font color="#FFE79C3E">дітей</font>?\n
+•   Більшість послуг <font color="#FFE79C3E">догляду за дітьми</font> <font color="#FFE79C3E">недоступні</font> або <font color="#FFE79C3E">надто дорогі</font> для Вас?\n
+•   Ми допоможемо вам знайти <font color="#FFE79C3E">мам поблизу</font> з такими ж проблемами!\n
+•   <font color="#FFE79C3E">Об’єднайте</font> своїх дітей у <font color="#FFE79C3E">групи денного догляду</font> та <font color="#FFE79C3E">по черзі</font> доглядайте за ними у вільний час!\n
+•   Насолоджуйтеся своєю <font color="#FFE79C3E">роботою</font>, поки ваші діти <font color="#FFE79C3E">щасливі</font> та <font color="#FFE79C3E">доглянуті</font>!</string>
+    <string name="account_summary_title">Ви можете змінити дані свого профілю нижче:</string>
+    <string name="location"><b>Ви вибрали місцезнаходження:</b>\n%1$s</string>
+    <string name="radius"><b>Вибраний радіус зони становить:</b>\n%1$d км</string>
+    <string name="children"><b>Діти:</b>\n</string>
+    <string name="schedule"><b>Розклад:</b>\n</string>
+    <string name="confirm_password">Повторіть пароль</string>
+    <string name="enter_password">Введіть пароль</string>
+    <string name="passwords_not_match">Паролі не співпадають</string>
+    <string name="passwords_match">Паролі співпадають</string>
+</resources>

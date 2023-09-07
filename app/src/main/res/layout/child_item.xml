@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_kid"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height_32dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:textSize="@dimen/text_size_20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_ok"
+        android:layout_width="@dimen/button_width_48dp"
+        android:layout_height="@dimen/button_height_48dp"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:layout_marginEnd="@dimen/margin_4dp"
+        android:background="@color/fui_transparent"
+        android:contentDescription="@android:string/ok"
+        android:minWidth="@dimen/button_width_48dp"
+        android:minHeight="@dimen/button_height_48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_tick"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_editDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="btn_delete,btn_edit" />
+
+    <ImageButton
+        android:id="@+id/btn_edit"
+        android:layout_width="@dimen/button_width_48dp"
+        android:layout_height="@dimen/button_height_48dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/margin_4dp"
+        android:background="@color/fui_transparent"
+        android:contentDescription="@string/edit_child"
+        app:srcCompat="@drawable/ic_edit"
+        app:layout_constraintEnd_toStartOf="@id/btn_delete"
+        app:layout_constraintTop_toTopOf="@id/btn_ok" />
+
+    <ImageButton
+        android:id="@+id/btn_delete"
+        android:layout_width="@dimen/button_width_48dp"
+        android:layout_height="@dimen/button_height_48dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/margin_4dp"
+        android:background="@color/fui_transparent"
+        android:contentDescription="@string/delete_child_title"
+        app:srcCompat="@drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_ok" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="il_enterChildName,il_enterChildAge" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/il_enterChildName"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_64dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:textColorHint="@color/edittext_hint_color"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_kid">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_enterChildName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/fui_name_hint"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/il_enterChildAge"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_64dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:textColorHint="@color/edittext_hint_color"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_enterChildName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_enterChildAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_age"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_addChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tv_addChild,btn_add" />
+
+        <TextView
+            android:id="@+id/tv_addChild"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height_48dp"
+            android:layout_marginEnd="@dimen/margin_2dp"
+            android:gravity="center_vertical"
+            android:text="@string/add_child"
+            android:textAlignment="viewEnd"
+            android:textSize="@dimen/text_size_16sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/btn_add"
+            app:layout_constraintBottom_toBottomOf="@id/btn_add"
+            app:layout_constraintTop_toTopOf="@id/btn_add" />
+
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:layout_width="@dimen/button_width_48dp"
+            android:layout_height="@dimen/button_height_48dp"
+            android:layout_marginEnd="@dimen/margin_4dp"
+            android:background="@color/fui_transparent"
+            android:contentDescription="@string/add_child"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/il_enterChildAge"
+            app:srcCompat="@drawable/ic_plus" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

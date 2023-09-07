@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="presentation.settings.fragment.UserSettingsUserLocationFragment">
+
+    <TextView
+        android:id="@+id/tv_pickLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:gravity="center"
+        android:text="@string/pick_location_on_map"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_24sp"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:background="@color/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_currentLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pickLocation">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/il_enterAddress"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height_64dp"
+        android:layout_marginBottom="@dimen/margin_24dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:textColorHint="@color/edittext_hint_color"
+        app:layout_constraintBottom_toTopOf="@+id/btn_currentLocation"
+        app:layout_constraintEnd_toStartOf="@+id/btn_enterAddress"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/btn_currentLocation">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_enterAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_address"
+            android:importantForAutofill="no"
+            android:inputType="textPostalAddress"
+            android:minHeight="@dimen/button_height_48dp"
+            android:textSize="@dimen/text_size_20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_enterAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:background="@drawable/ic_find"
+        app:layout_constraintBottom_toBottomOf="@+id/il_enterAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/il_enterAddress"
+        app:layout_constraintTop_toTopOf="@+id/il_enterAddress" />
+
+    <Button
+        android:id="@+id/btn_currentLocation"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height_64dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:backgroundTint="@color/button_state_colors"
+        android:gravity="center"
+        android:minLines="2"
+        android:text="@string/choose_my_location"
+        android:textColor="@color/button_text_state_colors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/il_enterAddress" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height_64dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:backgroundTint="@color/button_state_colors"
+        android:gravity="center"
+        android:text="@string/save_user"
+        android:textColor="@color/button_text_state_colors"
+        app:layout_constraintBottom_toTopOf="@+id/av_mapsFragmentBanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_currentLocation"
+        app:layout_constraintTop_toBottomOf="@+id/btn_currentLocation" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/av_mapsFragmentBanner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_2dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-5575310058998232/7751071664"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_currentLocation"
+        app:layout_constraintStart_toStartOf="@+id/btn_currentLocation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

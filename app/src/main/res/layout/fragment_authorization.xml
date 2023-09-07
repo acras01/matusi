@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/background"
+    tools:context=".presentation.authorization.fragment.AuthorizationFragment">
+
+    <ImageView
+        android:id="@+id/iv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/tv_title"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner_krakenimages"
+        app:layout_constraintBottom_toTopOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_newUser"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:scrollbars="vertical"
+        android:text="@string/welcome_summary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <Button
+        android:id="@+id/btn_newUser"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_64dp"
+        android:layout_above="@+id/btn_existingUser"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/margin_48dp"
+        android:layout_marginEnd="@dimen/margin_48dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:backgroundTint="@color/button_state_colors"
+        android:gravity="center"
+        android:text="@string/new_user"
+        android:textColor="@color/button_text_state_colors" />
+
+    <Button
+        android:id="@+id/btn_existingUser"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/margin_48dp"
+        android:layout_marginEnd="@dimen/margin_48dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:backgroundTint="@color/button_state_colors"
+        android:gravity="center"
+        android:text="@string/existing_user"
+        android:textColor="@color/button_text_state_colors" />
+
+</RelativeLayout>

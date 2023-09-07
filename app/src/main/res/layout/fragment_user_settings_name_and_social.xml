@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <data>
+        <variable
+            name="parent"
+            type="ua.od.acros.matusi.domain.model.Parent" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.settings.UserSettingsNameAndSocialFragment">
+
+        <TextView
+            android:id="@+id/tv_setNameAndSocial"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:gravity="center"
+            android:text="@string/name_and_social"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/il_Name"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_64dp"
+            android:layout_below="@+id/tv_setNameAndSocial"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:textColorHint="@color/edittext_hint_color"
+            app:layout_constraintBottom_toTopOf="@+id/il_FB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_setNameAndSocial"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/fui_name_hint"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="@dimen/button_height_48dp"
+                android:text="@{parent.nickname}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/il_FB"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_64dp"
+            android:layout_below="@+id/il_Name"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:textColorHint="@color/edittext_hint_color"
+            app:layout_constraintBottom_toTopOf="@+id/il_Twi"
+            app:layout_constraintEnd_toEndOf="@+id/il_Name"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/il_Name"
+            app:layout_constraintTop_toBottomOf="@+id/il_Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_FB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_fb_tv"
+                android:drawablePadding="@dimen/margin_4dp"
+                android:hint="@string/fui_idp_name_facebook"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="@dimen/button_height_48dp"
+                android:text="@{parent.facebook}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/il_Twi"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_64dp"
+            android:layout_below="@+id/il_FB"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:textColorHint="@color/edittext_hint_color"
+            app:layout_constraintBottom_toTopOf="@+id/il_Sky"
+            app:layout_constraintEnd_toEndOf="@+id/il_Name"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/il_Name"
+            app:layout_constraintTop_toBottomOf="@+id/il_FB">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_Twi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_twi_tv"
+                android:drawablePadding="@dimen/margin_4dp"
+                android:hint="@string/fui_idp_name_twitter"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="@dimen/button_height_48dp"
+                android:text="@{parent.twitter}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/il_Sky"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_64dp"
+            android:layout_below="@+id/il_Twi"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:textColorHint="@color/edittext_hint_color"
+            app:layout_constraintBottom_toTopOf="@+id/il_Vib"
+            app:layout_constraintEnd_toEndOf="@+id/il_Name"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/il_Name"
+            app:layout_constraintTop_toBottomOf="@+id/il_Twi">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_Sky"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_sk_tv"
+                android:drawablePadding="@dimen/margin_4dp"
+                android:hint="@string/skype"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="@dimen/button_height_48dp"
+                android:text="@{parent.skype}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/il_Vib"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_64dp"
+            android:layout_below="@+id/il_Sky"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginBottom="@dimen/margin_64dp"
+            android:textColorHint="@color/edittext_hint_color"
+            app:layout_constraintBottom_toTopOf="@+id/btn_Next"
+            app:layout_constraintEnd_toEndOf="@+id/il_Name"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/il_Name"
+            app:layout_constraintTop_toBottomOf="@+id/il_Sky">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_Vib"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_vib_tv"
+                android:drawablePadding="@dimen/margin_4dp"
+                android:hint="@string/viber"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="@dimen/button_height_48dp"
+                android:text="@{parent.viber}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_Next"
+            android:layout_width="@dimen/button_width_192dp"
+            android:layout_height="@dimen/button_height_64dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/button_state_colors"
+            android:gravity="center"
+            android:text="@string/save_user"
+            android:textColor="@color/button_text_state_colors"
+            app:layout_constraintBottom_toTopOf="@+id/av_adBanner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/av_adBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-5575310058998232/7751071664"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

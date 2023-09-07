@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/margin_32dp"
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:layout_marginEnd="@dimen/margin_32dp"
+        android:text="@string/give_permissions_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_24sp" />
+
+    <TextView
+        android:id="@+id/tv_permissionsRequire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_24dp"
+        android:text="@string/give_permissions"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18sp" />
+
+    <CheckBox
+        android:id="@+id/cb_doNotAsk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:minHeight="@dimen/button_height_48dp"
+        android:text="@string/do_not_ask"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_20sp" />
+</androidx.appcompat.widget.LinearLayoutCompat>

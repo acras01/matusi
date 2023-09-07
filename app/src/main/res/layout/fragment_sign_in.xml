@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/background"
+    tools:context="presentation.authorization.fragment.SignInFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_64dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:gravity="center"
+        android:text="@string/welcome_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/btn_emailSignIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_emailSignIn"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height_64dp"
+        android:layout_marginStart="@dimen/margin_32dp"
+        android:layout_marginTop="@dimen/margin_64dp"
+        android:layout_marginEnd="@dimen/margin_32dp"
+        android:background="@drawable/ic_sign_up"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="@dimen/margin_8dp"
+        android:gravity="center"
+        android:padding="@dimen/margin_8dp"
+        android:text="@string/fui_sign_in_with_email"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_googleSignIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_googleSignIn"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height_64dp"
+        android:layout_marginTop="@dimen/margin_32dp"
+        android:background="@drawable/ic_sign_up"
+        android:drawableStart="@drawable/ic_google"
+        android:drawablePadding="@dimen/margin_8dp"
+        android:gravity="center"
+        android:padding="@dimen/margin_8dp"
+        android:text="@string/fui_sign_in_with_google"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/iv_banner"
+        app:layout_constraintEnd_toEndOf="@+id/btn_emailSignIn"
+        app:layout_constraintStart_toStartOf="@+id/btn_emailSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/btn_emailSignIn" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_64dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner_artem_kniaz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_googleSignIn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

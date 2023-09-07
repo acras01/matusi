@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authorization"
+    app:startDestination="@+id/authorizationFragment">
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="ua.od.acros.matusi.presentation.authorization.fragment.AuthorizationFragment"
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_authorizationFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_authorizationFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="ua.od.acros.matusi.presentation.authorization.fragment.SignInFragment"
+        android:label="@string/action_sign_in_short"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_emailSignInFragment"
+            app:destination="@id/emailSignInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="ua.od.acros.matusi.presentation.authorization.fragment.RegisterFragment"
+        android:label="@string/sign_up"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/emailSignInFragment"
+        android:name="ua.od.acros.matusi.presentation.authorization.fragment.EmailSignInFragment"
+        android:label="@string/sign_in_with_email"
+        tools:layout="@layout/fragment_email_sign_in" />
+    <action
+        android:id="@+id/action_global_authorizationFragment"
+        app:destination="@id/authorizationFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/authorizationFragment"
+        app:popUpToInclusive="true" />
+
+</navigation>

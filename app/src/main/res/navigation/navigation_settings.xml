@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/userSettings"
+    app:startDestination="@id/userAccountFragment">
+    <fragment
+        android:id="@+id/userSettingsNameAndSocialFragment"
+        android:name="ua.od.acros.matusi.presentation.settings.fragment.UserSettingsNameAndSocialFragment"
+        android:label="@string/name_title"
+        tools:layout="@layout/fragment_user_settings_name_and_social">
+        <action
+            android:id="@+id/action_userSettingsNameAndSocialFragment_to_userSettingsLocationFragment"
+            app:destination="@id/userSettingsUserLocationFragment" />
+        <argument
+            android:name="fromAccountSummary"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSettingsUserLocationFragment"
+        android:name="ua.od.acros.matusi.presentation.settings.fragment.UserSettingsUserLocationFragment"
+        android:label="@string/location_title"
+        tools:layout="@layout/fragment_user_location">
+        <action
+            android:id="@+id/action_userSettingsLocationFragment_to_userSettingsUserLocationRadiusFragment"
+            app:destination="@id/userSettingsUserLocationRadiusFragment" />
+        <argument
+            android:name="fromAccountSummary"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_userSettingsUserLocationFragment_to_userSettingsNameAndSocialFragment"
+            app:destination="@id/userSettingsNameAndSocialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSettingsUserLocationRadiusFragment"
+        android:name="ua.od.acros.matusi.presentation.settings.fragment.UserSettingsUserLocationRadiusFragment"
+        android:label="@string/set_radius_title"
+        tools:layout="@layout/fragment_user_location_radius">
+        <action
+            android:id="@+id/action_userSettingsUserLocationRadiusFragment_to_userSettingsAddChildrenFragment"
+            app:destination="@id/userSettingsAddChildrenFragment" />
+        <argument
+            android:name="fromAccountSummary"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_userSettingsUserLocationRadiusFragment_to_userSettingsUserLocationFragment"
+            app:destination="@id/userSettingsUserLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSettingsAddChildrenFragment"
+        android:name="ua.od.acros.matusi.presentation.settings.fragment.UserSettingsAddChildrenFragment"
+        android:label="@string/add_child_title"
+        tools:layout="@layout/fragment_user_settings_add_children" >
+        <action
+            android:id="@+id/action_userSettingsAddChildrenFragment_to_userSettingsUserScheduleFragment"
+            app:destination="@id/userSettingsUserScheduleFragment" />
+        <argument
+            android:name="fromAccountSummary"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_userSettingsAddChildrenFragment_to_userSettingsUserLocationRadiusFragment"
+            app:destination="@id/userSettingsUserLocationRadiusFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSettingsUserScheduleFragment"
+        android:name="ua.od.acros.matusi.presentation.settings.fragment.UserSettingsUserScheduleFragment"
+        android:label="@string/child_schedule"
+        tools:layout="@layout/fragment_user_settings_user_schedule">
+        <argument
+            android:name="fromAccountSummary"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_userSettingsUserScheduleFragment_to_userSettingsAddChildrenFragment"
+            app:destination="@id/userSettingsAddChildrenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userAccountFragment"
+        android:name="ua.od.acros.matusi.presentation.settings.fragment.UserAccountFragment"
+        android:label="@string/account_settings"
+        tools:layout="@layout/fragment_user_account" >
+        <action
+            android:id="@+id/action_userAccountFragment_to_userSettingsNameAndSocialFragment"
+            app:destination="@id/userSettingsNameAndSocialFragment" />
+        <action
+            android:id="@+id/action_userAccountFragment_to_userSettingsUserLocationFragment"
+            app:destination="@id/userSettingsUserLocationFragment" />
+        <action
+            android:id="@+id/action_userAccountFragment_to_userSettingsUserLocationRadiusFragment"
+            app:destination="@id/userSettingsUserLocationRadiusFragment" />
+        <action
+            android:id="@+id/action_userAccountFragment_to_userSettingsAddChildrenFragment"
+            app:destination="@id/userSettingsAddChildrenFragment" />
+        <action
+            android:id="@+id/action_userAccountFragment_to_userSettingsUserScheduleFragment"
+            app:destination="@id/userSettingsUserScheduleFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_userAccountFragment" app:destination="@id/userAccountFragment" />
+</navigation>

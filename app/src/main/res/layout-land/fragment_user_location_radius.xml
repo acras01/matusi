@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.settings.fragment.UserSettingsUserLocationRadiusFragment">
+
+    <TextView
+        android:id="@+id/tv_pickLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:gravity="center"
+        android:text="@string/set_radius"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:background="@color/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_limit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pickLocation">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/seek_radius"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:stepSize="1.0"
+        android:valueFrom="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_limit"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pickLocation"
+        app:thumbColor="@color/brand_color_primary"
+        app:trackColorActive="@color/brand_color_primary"
+        app:trackColorInactive="@color/brand_color_grey"
+        app:trackHeight="@dimen/slider_track_height" />
+
+    <TextView
+        android:id="@+id/tv_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/choose_limit"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seek_radius" />
+
+    <Spinner
+        android:id="@+id/sp_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height_48dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:entries="@array/limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_limit"
+        app:layout_constraintTop_toBottomOf="@+id/tv_limit" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height_64dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:backgroundTint="@color/button_state_colors"
+        android:gravity="center"
+        android:text="@string/save_user"
+        android:textColor="@color/button_text_state_colors"
+        app:layout_constraintBottom_toTopOf="@+id/av_mapsFragmentBanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_limit"
+        app:layout_constraintTop_toBottomOf="@+id/sp_limit" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/av_mapsFragmentBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_2dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-5575310058998232/7751071664"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_limit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

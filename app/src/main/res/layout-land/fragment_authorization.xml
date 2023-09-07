@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/background"
+    tools:context=".presentation.authorization.fragment.AuthorizationFragment">
+
+    <ImageView
+        android:id="@+id/iv_banner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/banner_krakenimages"
+        app:layout_constraintBottom_toTopOf="@+id/tv_title"
+        app:layout_constraintEnd_toStartOf="@+id/btn_newUser"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:scrollbars="vertical"
+        android:text="@string/welcome_summary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/iv_banner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/iv_banner"
+        app:layout_constraintTop_toBottomOf="@+id/iv_banner" />
+
+    <Button
+        android:id="@+id/btn_newUser"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height_64dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:backgroundTint="@color/button_state_colors"
+        android:gravity="center"
+        android:text="@string/new_user"
+        android:textColor="@color/button_text_state_colors"
+        app:layout_constraintBottom_toTopOf="@+id/btn_existingUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_banner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btn_existingUser"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height_64dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:backgroundTint="@color/button_state_colors"
+        android:gravity="center"
+        android:text="@string/existing_user"
+        android:textColor="@color/button_text_state_colors"
+        app:layout_constraintBottom_toTopOf="@id/av_adBanner"
+        app:layout_constraintEnd_toEndOf="@id/btn_newUser"
+        app:layout_constraintStart_toStartOf="@id/btn_newUser"
+        app:layout_constraintTop_toBottomOf="@+id/btn_newUser" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/av_adBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-5575310058998232/7751071664"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_existingUser"
+        app:layout_constraintStart_toStartOf="@+id/btn_existingUser" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
